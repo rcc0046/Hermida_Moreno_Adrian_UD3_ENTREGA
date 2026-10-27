@@ -1,0 +1,50 @@
+/* =====================================================================
+   Forja de Héroes · estilos (se entregan hechos: el reto es el PHP)
+   ===================================================================== */
+:root {
+  --fondo: #1a1423; --pergamino: #f4ead5; --tinta: #2b2118; --oro: #d4a017;
+  --sangre: #b3261e; --vida: #2e9e5b; --xp: #3a6ea5; --tenue: #7a6a55;
+  --mono: "JetBrains Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem 1rem; background: var(--fondo); font-family: Georgia, "Times New Roman", serif; color: var(--tinta); }
+main { max-width: 860px; margin: 0 auto; background: var(--pergamino); border-radius: 18px; padding: 2rem 2.2rem; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+h1 { margin: 0; font-size: 2rem; }
+.subtitulo { color: var(--tenue); font-style: italic; margin: .2rem 0 1.2rem; }
+h2 { font-size: 1.15rem; border-bottom: 2px solid var(--oro); padding-bottom: .2rem; margin-top: 1.8rem; }
+.insignia { display: inline-block; background: var(--oro); color: #fff; font-family: var(--mono); font-size: .8rem; padding: .15rem .6rem; border-radius: 999px; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .8rem; }
+.stat { background: #fffaf0; border: 1px solid #e2d3b0; border-radius: 12px; padding: .7rem .9rem; }
+.stat .etq { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--tenue); font-family: system-ui, sans-serif; }
+.stat .val { font-size: 1.5rem; font-weight: bold; font-family: var(--mono); }
+.barra { font-family: var(--mono); letter-spacing: 1px; font-size: 1.05rem; }
+.vida { color: var(--vida); } .xp { color: var(--xp); } .peligro { color: var(--sangre); }
+table { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: .95rem; }
+th, td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid #e2d3b0; }
+pre { background: #2b2118; color: #f4ead5; border-radius: 10px; padding: .9rem 1rem; overflow-x: auto; font-size: .85rem; }
+footer { margin-top: 2rem; font-size: .85rem; color: var(--tenue); font-family: system-ui, sans-serif; }
+.rejilla + table { margin-top: 1rem; }
+
+/* ---- Novedades UD3 · Forja de Héroes II ------------------------------ */
+td .barra, .barra.mini { font-size: .7rem; letter-spacing: 0; }
+.mini { color: var(--vida); }
+.diario { font-family: system-ui, sans-serif; font-size: .92rem; line-height: 1.55; padding-left: 1.4rem; }
+.diario li::marker { color: var(--oro); font-weight: bold; }
+.resultado { font-size: 1.1rem; margin: 1rem 0 .4rem; }
+.stat .val.peq { font-size: 1rem; }
+.rejilla { margin-top: 1rem; }
+table.mapa { width: auto; border-collapse: separate; border-spacing: 2px; font-family: var(--mono); margin: .4rem 0 1rem; }
+table.mapa td { width: 1.9rem; height: 1.9rem; padding: 0; text-align: center; border: 0; border-radius: 4px; font-weight: bold; }
+.mapa .muro    { background: #4a3b2c; color: #4a3b2c; }
+.mapa .suelo   { background: #e9dcc0; color: #b9a684; }
+.mapa .agua    { background: #3a6ea5; color: #cfe0f3; }
+.mapa .entrada { background: var(--vida); color: #fff; }
+.mapa .sala    { background: var(--oro); color: #fff; }
+.mapa .jefe    { background: var(--sangre); color: #fff; }
+.mapa .desconocida { background: #fff; color: var(--sangre); outline: 2px dashed var(--sangre); }
+code { font-family: var(--mono); background: #fffaf0; border: 1px solid #e2d3b0; border-radius: 4px; padding: 0 .3rem; }
+@media (max-width: 640px) {
+  main { padding: 1.2rem 1rem; }
+  table { font-size: .8rem; }
+  table.mapa td { width: 1.4rem; height: 1.4rem; }
+}
